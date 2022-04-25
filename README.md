@@ -40,7 +40,7 @@ near delete <subAccountName>.<AccountName>.testnet <AccountName>.testnet
 ```
 - Create domain
 ```sh 
-near call $CONTRACT createDomain '{"address": "wallet.near", "accessible": true, "description": "Available near url", "price": "1000000000000000000000000"}' 
+near call $CONTRACT createDomain '{"address": "wallet.near", "accessible": true, "description": "Available near url", "price": "1000000000000000000000000"}'  --accountId <AccountName>.testnet
 ```
 - Get all domains
 ```sh 

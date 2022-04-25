@@ -26,5 +26,47 @@ export CONTRACT=<AccountId>
 ```sh 
 echo $CONTRACT
 ```
-- All Domains
-
+- Create test account(optional)
+```sh 
+near create-account <subAccountName>.<AccountName>.testnet --masterAccount <AccountName>.testnet --initialBalance 20
+```
+- Check test account(optional)
+```sh 
+near state <subAccName1>.<AccountName>.testnet
+```
+- Delete test account(optional)
+```sh 
+near delete <subAccountName>.<AccountName>.testnet <AccountName>.testnet
+```
+- Create domain
+```sh 
+near call $CONTRACT createDomain '{"address": "wallet.near", "accessible": true, "description": "Available near url", "price": "1000000000000000000000000"}' 
+```
+- Get all domains
+```sh 
+near call $CONTRACT getDomains '{"offset": 0}' 
+```
+- Get domain by domainId
+```sh 
+near call $CONTRACT getDomainById '{"id": 1000}' 
+```
+- Update domain
+```sh 
+near call $CONTRACT updateDomain 
+```
+- Delete domain
+```sh 
+near call $CONTRACT deleteDomain 
+```
+- Subscription for domain
+```sh 
+near call $CONTRACT addTransaction
+```
+- Get transactions for subscription
+```sh 
+near call $CONTRACT getTransactions
+```
+- Get transactions by domainId
+```sh 
+near call $CONTRACT getTransactionsByDomainId
+```

@@ -52,21 +52,21 @@ near call $CONTRACT getDomainById '{"id": 1000}'
 ```
 - Update domain
 ```sh 
-near call $CONTRACT updateDomain 
+near call $CONTRACT updateDomain '{"id": 2434609302,"updates":{"accessible":false,"description":"change","createdDate":0, "expiredDate":0,"price":"2000000000000000000000000"}}' --accountId <AccountName>.testnet
 ```
 - Delete domain
 ```sh 
-near call $CONTRACT deleteDomain 
+near call $CONTRACT deleteDomain '{"id":2434609302}' --accountId <AccountName>.testnet
 ```
 - Subscription for domain
 ```sh 
-near call $CONTRACT addTransaction
+near call $CONTRACT addTransaction '{"useTemplate":false, "domainId":2434609302}' --accountId <AccountName>.testnet --deposit 4
 ```
 - Get transactions for subscription
 ```sh 
-near call $CONTRACT getTransactions
+near view $CONTRACT getTransactions
 ```
 - Get transactions by domainId
 ```sh 
-near call $CONTRACT getTransactionsByDomainId
+near view $CONTRACT getTransactionsByDomainId '{"id":2710975801}'
 ```

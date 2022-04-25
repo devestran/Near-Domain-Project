@@ -32,7 +32,7 @@ near create-account <subAccountName>.<AccountName>.testnet --masterAccount <Acco
 ```
 - Check test account(optional)
 ```sh 
-near state <subAccName1>.<AccountName>.testnet
+near state <subAccountName>.<AccountName>.testnet
 ```
 - Delete test account(optional)
 ```sh 

@@ -44,11 +44,11 @@ near call $CONTRACT createDomain '{"address": "wallet.near", "accessible": true,
 ```
 - Get all domains
 ```sh 
-near call $CONTRACT getDomains '{"offset": 0}' 
+near view $CONTRACT getDomains '{"offset": 0}' 
 ```
 - Get domain by domainId
 ```sh 
-near call $CONTRACT getDomainById '{"id": 1000}' 
+near view $CONTRACT getDomainById '{"id": 1000}' 
 ```
 - Update domain
 ```sh 

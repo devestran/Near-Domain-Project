@@ -16,7 +16,7 @@ yarn build:release
 ```
 - Deploy
 ```sh 
-near dev-deploy ./build/debug/domain.wasm
+near dev-deploy ./build/release/domain.wasm
 ```
 - Contract define(sample AccountID:dev-1111-111111111111)
 ```sh 
